@@ -307,16 +307,7 @@ section{
    padding: 2rem;
    font-size: 2rem;
 }
-.side-bar .navbar .try{
-   display: block;
-   padding: 2rem;
-   font-size: 2rem;
-}
 
-.side-bar .navbar .try{
-   margin-right: 1.5rem;
-   color:var(--main-color);
-}
 .side-bar .navbar a i{
    margin-right: 1.5rem;
    color:var(--main-color);
