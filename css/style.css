@@ -246,7 +246,7 @@ section{
 .side-bar{
    position: fixed;
    top: 0; left: 0;
-   width: 20rem;
+   width: 22rem; /* Increase width from 20rem to 22rem */
    background-color: var(--white);
    height: 100vh;
    border-right: var(--border);
@@ -1179,17 +1179,41 @@ section{
 
 .contact .row form .box{
    width: 100%;
-   border-radius: .5rem;
-   background-color: var(--light-bg);
-   margin: 1rem 0;
+   border-radius: 0.5rem;
    padding: 1.4rem;
    font-size: 1.8rem;
-   color: var(--black);
+   color: var(--black); /* Text color for light theme */
+   background-color: var(--light-bg); /* Background for light theme */
+   border: var(--border);
+   margin: 1rem 0;
+   transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+
+body.dark form .box {
+   color: var(--white); /* Text color for dark theme */
+   background-color: var(--black); /* Background for dark theme */
+   border: var(--border);
 }
 
 .contact .row form textarea{
+   width: 100%;
    height: 20rem;
    resize: none;
+   border-radius: 0.5rem;
+   padding: 1.4rem;
+   font-size: 1.8rem;
+   color: var(--black); /* Text color for light theme */
+   background-color: var(--light-bg); /* Background for light theme */
+   border: var(--border);
+   margin: 1rem 0;
+   transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+body.dark form textarea {
+   color: var(--white); /* Text color for dark theme */
+   background-color: var(--black); /* Background for dark theme */
+   border: var(--border);
 }
 
 .contact .box-container{
@@ -1240,43 +1264,56 @@ section{
 }
 
 .form-container form{
-   background-color: var(--white);
-   border-radius: .5rem;
+   background-color: var(--white); /* Light theme background */
+   color: var(--black); /* Light theme text color */
+   border-radius: 0.5rem;
    padding: 2rem;
    width: 50rem;
+   transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
 }
 
-.form-container form h3{
-   font-size: 2.5rem;
-   text-transform: capitalize;
-   color: var(--black);
-   text-align: center;
+/* Dark mode styles for the form */
+body.dark .form-container form {
+   background-color: var(--black); /* Dark theme background */
+   color: var(--white); /* Dark theme text color */
 }
 
-.form-container form p{
-   font-size: 1.7rem;
-   color: var(--light-color);
-   padding-top: 1rem;
-}
-
-.form-container form p span{
-   color: var(--red);
-}
-
-.form-container form .box{
+/* Input and textarea styles for light mode */
+.form-container form .box {
    font-size: 1.8rem;
-   color: var(--black);
-   border-radius: .5rem;
+   color: var(--black); /* Light theme text color */
+   background-color: var(--light-bg); /* Light theme background */
+   border-radius: 0.5rem;
    padding: 1.4rem;
-   background-color: var(--light-bg);
    width: 100%;
    margin: 1rem 0;
+   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Input and textarea styles for dark mode */
+body.dark .form-container form .box {
+   color: var(--white); /* Dark theme text color */
+   background-color: var(--black); /* Dark theme background */
+}
 
+/* Button styles */
+.form-container form .btn {
+   background-color: var(--main-color);
+   color: var(--white);
+   border-radius: 0.5rem;
+   padding: 1rem 3rem;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   text-align: center;
+   margin-top: 1rem;
+   transition: background-color 0.3s, color 0.3s;
+}
 
-
-
+.form-container form .btn:hover {
+   background-color: var(--black);
+   color: var(--white);
+}
 
 .footer{
    background-color: var(--white);

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<style>
+    .request-form {
+        font-size: 2rem; /* Adjust the size as needed */
+    }
+    body.dark form .box {
+    color: var(--white); /* Text color for dark theme */
+    background-color: var(--black); /* Background for dark theme */
+    border: var(--border);
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Notes</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header class="header">
+    
+    <section class="flex">
+
+        <a href="home.html" class="logo">Educa.</a>
+
+        <div class="icons">
+            <div id="toggle-btn" class="fas fa-sun"></div>
+        </div>
+
+    </section>
+
+</header>   
+
+<div class="side-bar">
+
+    <div id="close-btn">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <nav class="navbar">
+        <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+        <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
+        <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+        <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+        <a href="suggest.html"><i class="fas fa-lightbulb"></i><span>request material</span></a>
+    </nav>
+
+</div>
+
+<section class="contact">
+
+    <div class="row">
+ 
+       <div class="image">
+          <img src="images/contact-img.svg" alt="">
+       </div>
+ 
+       <form action="" method="post">
+          <h3>Request Lecture Recordings or Notes</h3>
+          <input type="text" placeholder="enter your name" name="name" required maxlength="50" class="box">
+          <input type="email" placeholder="enter your telegram username" name="email" required maxlength="50" class="box">
+          <textarea name="msg" class="box" placeholder="Provide details about the lecture or notes you'd like to see uploaded" required maxlength="1000" cols="30" rows="10"></textarea>
+          <input type="submit" value="Submit Request" class="inline-btn" name="submit">
+       </form>
+ 
+    </div>
+ 
+ </section>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
