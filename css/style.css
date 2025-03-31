@@ -1390,6 +1390,11 @@ body.dark .form-container form .box {
    }
 
 }
+#msg{
+   color: #61b752;
+   margin-top: -10px;
+   display: block;
+}
 
 @media (max-width:450px){
 
